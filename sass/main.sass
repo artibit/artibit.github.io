@@ -1,0 +1,922 @@
+//Color
+$green: #24aa17
+$grey: #f5f6f8
+$darken-grey: #dddddd
+$white: #ffffff
+$text: #717075
+$light-green: #87d07f
+
+
+
+html
+	font-family: 'Open Sans Regular'
+.container
+	max-width: 1170px
+	margin: 0 auto
+ul, ol
+	list-style: none
+	padding: 0
+	margin: 0
+a
+	text-decoration: none
+	outline: none
+#form.open
+	//transform: translateX(-50%)
+	left: 0
+	
+
+//Header
+#header
+	max-height: 600px
+	overflow: hidden
+
+.top-bar
+	display: flex
+	justify-content: space-around
+	align-items: center
+.nav-bar
+	background: $grey
+.nav-bar__menu
+	.gamburger
+		.fa
+			color: $green
+			font-size: 18px
+			padding: 2px
+			margin: 20px
+		display: inline-block
+		cursor: pointer
+		outline: none
+		//&:hover > ul
+		//	display: block
+		&:hover > .fa
+			background: $darken-grey
+		ul
+			position: absolute
+			display: none
+			width: calc(100% - 5px)
+			max-width: 450px
+			background: white
+			z-index: 2
+			li
+				transition: 0.2s ease-in-out
+				&:hover
+					background: $green
+					a
+						color: $white
+				a
+					padding: 20px 25px
+					display: block
+					color: black
+					font-weight: 600
+					font-size: 12px
+					text-transform: uppercase
+.logo
+	display: flex
+	align-items: center
+	p
+		padding-left: 10px
+		color: $green
+.search
+	margin: 20px
+	.fa
+		color: $green
+
+//Info-block
+.info-block
+	padding: 15px 15px 0 15px
+	display: flex
+	justify-content: space-between
+	align-items: flex-start
+	display: none
+	.list
+		font-size: 14px
+		padding-top: 10px
+		padding-bottom: 20px
+		.fa
+			color: $green
+		p
+			color: $text
+			margin: 5px 0
+	.contacts
+		padding-bottom: 20px
+		a
+			text-decoration: none
+			color: $green
+			font-size: 14px
+		p
+			margin: 5px 0
+			font-size: 14px
+			color: $text
+	.social
+		color: $text
+		padding-bottom: 10px
+		.fa
+			margin-top: 10px
+			color: $white
+			background: darken($grey, 15%)
+			padding: 5px
+			border-radius: 7px
+			margin-right: 7px
+			font-size: 20px
+			transition: 0.2s ease-in-out
+			&:hover
+				background: $green
+				cursor: pointer
+	
+//Descktop-menu
+.desktop-menu
+	background: white
+	border-top: 1px solid darken($grey, 10%)
+	display: none
+	.nav-bar__menu
+		text-transform: uppercase
+		font-size: 14px
+		display: flex
+		li.item
+			&:hover
+				background: $grey
+				transition: 0.2s ease-in-out
+			a
+				display: inline-block
+				padding: 30px 20px
+				font-size: 14px
+				color: black
+				font-family: 'Open Sans Regular'
+		li.search
+			border-right: 1px solid darken($grey, 10%)
+			border-left: 1px solid darken($grey, 10%)
+			padding: 30px 20px
+			margin: 0
+			position: relative
+			&:hover
+				cursor: pointer
+			.fa
+				color: $green
+				font-size: 18px
+				margin: 0
+
+		.gamburger
+			border-right: 1px solid darken($grey, 10%)
+			border-left: 1px solid darken($grey, 10%)
+			padding-left: 20px
+			padding-right: 20px
+			.fa
+				color: $green
+				font-size: 18px
+				margin: 0
+				margin-left: 0
+				margin-right: 5px
+				padding-top: 30px
+				padding-bottom: 30px
+			&:hover > .fa
+				background: none
+			&:hover
+				background: $grey
+				transition: 0.2s ease-in-out
+			ul
+				margin-left: -20px
+				max-width: 300px
+				li
+					transition: 0.2s ease-in-out
+					&:hover
+						background: $green
+						a
+							color: $white
+					a
+						padding: 20px 25px
+						display: block
+						color: black
+						font-weight: 600
+						font-size: 12px
+						text-transform: uppercase
+
+//Video
+#video
+	overflow: hidden
+	padding-top: 150px
+	padding-bottom: 200px
+	position: relative
+	video
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		max-height: 700px
+		object-fit: cover
+		z-index: -1
+	.header-title
+		color: $white
+		font-family: 'Open Sans Bold'
+		font-size: 36px
+		text-align: center
+	.header-undertitle
+		margin: 0 auto
+		color: $white
+		text-align: center
+		line-height: 1.5
+		max-width: 730px
+//Cards
+#cards
+	.cards
+		position: relative
+		top: -35px
+		padding: 0 15px
+		.card
+			margin: 0 auto
+			padding: 30px
+			margin-bottom: 30px
+			position: relative
+			background: $white
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+			.icon
+				margin-bottom: 20px
+				display: block
+			.photo
+				display: block
+				position: absolute
+				top: 0
+				right: 0
+				border-radius: 0 0 0 100%
+				width: 100%
+				max-width: 140px
+				max-height: 140px
+			.card__link
+				display: inline-block
+				margin-top: 25px
+				font-size: 20px
+				font-family: 'Open Sans Bold'
+				font-weight: bold
+				color: black
+				text-decoration: solid underline $green
+				transition: 0.3s ease-in-out
+				&:hover
+					text-decoration: none
+
+
+.section-title
+	font-family: 'Open Sans ExtraBold'
+	font-size: 28px
+	max-width: 550px
+	display: inline-block
+
+.more
+	color: $green
+	font-family: 'Open Sans Bold'
+	text-transform: uppercase
+	font-size: 15px
+	text-decoration: underline $green
+	margin-left: 5px
+	&:hover
+		text-decoration: none
+
+//Project
+#project
+	padding: 0 15px
+.project-cards
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-around
+	.project-card
+		position: relative
+		overflow: hidden
+		margin-top: 20px
+		max-width: 280px
+		max-height: 280px
+		.overlay
+			background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7))
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			overflow: hidden
+			max-width: 280px
+			max-height: 280px
+			a
+				display: inline-block
+				position: absolute
+				bottom: 40px
+				color: $white
+				font-family: 'Open Sans Bold'
+				text-transform: uppercase
+				padding: 0 20px
+				font-size: 14px
+				line-height: 1.5
+				&:hover
+					text-decoration: underline
+			.overlay-info
+				width: 240px
+				position: absolute
+				bottom: 15px
+				color: $white
+				padding: 0 20px
+				display: flex
+				justify-content: space-between
+				font-size: 14px
+				.likes
+					.fa:hover
+						cursor: pointer
+						color: $green
+						transition: 0.3s ease-in-out
+		img
+			max-width: 280px
+			max-height: 280px
+
+.all_projects
+	color: $green
+	padding-top: 40px
+.all_projects-1
+	display: none
+	position: absolute
+	right: 30px
+	padding-top: 80px
+
+//Advantages
+#advantages
+	padding: 0 15px
+	padding-top: 80px
+	.advantages
+		padding-top: 50px
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		&-block
+			display: flex
+			align-items: flex-start
+			margin-bottom: 20px
+			&__text
+				h4
+					font-family: 'Open Sans Bold'
+					font-size: 18px
+					margin: 0
+				p
+					color: $text
+					font-size: 14px
+					line-height: 1.5
+					span
+						color: darken($text, 15%)
+						font-family: 'Open Sans Bold'
+			img
+				margin-right: 20px
+
+//Clients
+#clients
+	padding: 0 15px
+	padding-top: 60px
+	.all_clients
+		.fa
+			color: $green
+	.photo-block
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		align-items: center
+		padding-top: 30px
+		.photo
+			max-width: 150px
+			margin-bottom: 35px
+			img
+				max-width: 100%
+
+//Reviews
+#reviews
+	padding: 50px 15px 60px 15px
+	background: url(../img/review-bg.jpg)
+	background-position: center
+	background-repeat: no-repeat
+	.slider
+		padding-top: 40px
+		margin-bottom: 20px
+		//display: flex
+		justify-content: center
+	.slide
+		background: $white
+		max-width: 350px
+		padding: 18px
+		background-image: url(../img/review-i-bg.png)
+		background-size: 90%
+		background-repeat: no-repeat
+		margin: 0 10px
+		.company
+			display: flex
+			h3
+				font-family: 'Open Sans Bold'
+				padding-left: 10px
+				font-size: 16px
+			img
+				max-width: 90px
+				max-height: 90px
+		.text
+			color: $text
+			font-size: 14px
+			line-height: 1.5
+			padding-bottom: 30px
+		.about
+			display: flex
+			justify-content: space-between
+			.read_full
+				color: $green
+				a
+					font-family: 'Open Sans Regular'
+					font-size: 14px
+					text-transform: none
+					text-decoration: none
+					&:hover
+						text-decoration: underline
+.slick-prev
+	margin-left: -15px
+.slick-arrow
+	padding-top: 20px
+	&::before
+		font-size: 34px
+.all_reviews
+	.fa
+		color: $green
+	.more
+		color: $white
+		text-decoration-color: $white
+
+.section-undertitle
+	padding-top: 20px
+	color: $text
+	font-size: 15px
+	line-height: 1.5
+
+//Articles
+#articles
+	padding: 50px 15px 50px 15px
+	.all_reviews
+		margin-top: 30px
+		a
+			color: $green
+			&:hover
+				text-decoration: underline
+		.fa
+			color: $green
+	.project-cards
+		.project-card
+			.overlay
+				a
+					bottom: 110px
+				p
+					padding-top: 10px
+					position: absolute
+					bottom: 40px
+					padding: 0 20px
+					color: $white
+					font-size: 14px
+
+//News
+#news
+	padding: 30px 15px 50px 15px
+	background: url(../img/news-bg.jpg) center no-repeat
+	background-size: cover
+	.news-block
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		.block
+			background: $white
+			padding: 30px 20px
+			max-width: 450px
+			margin-bottom: 20px
+			.news__date
+				color: $text
+				font-size: 18px
+				span
+					font-size: 60px
+					color: $light-green
+					font-family: 'Open Sans ExtraBold'
+					line-height: 0.5
+			h4
+				font-family: 'Open Sans Bold'
+				margin: 15px 0
+			p
+				color: $text
+				font-size: 14px
+				padding-bottom: 10px
+				a
+					color: $text
+					&:hover
+						color: $green
+			.news__button
+				display: inline-block
+				background: darken($grey, 5%)
+				padding: 15px 20px
+				color: darken($grey, 26%)
+				font-family: 'Open Sans Bold'
+				transition: 0.2s ease-in-out
+				&:hover
+					background: $green
+					color: $white
+
+	.all_reviews
+		.fa
+			color: $green
+		.more
+			color: $white
+			text-decoration-color: $white
+.all_reviews-1
+	display: none
+
+//Contact
+#contact
+	padding: 30px 15px 60px 15px
+	img
+		display: none
+	.all_reviews
+		padding-top: 20px
+		a
+			color: $green
+			text-decoration: underline
+			&:hoverP
+				text-decoration: none
+		.fa
+			color: $green
+.contact__button, .contact__buttonF
+	display: inline-block
+	background: $green
+	padding: 15px 20px
+	color: $white
+	font-family: 'Open Sans Bold'
+	transition: 0.2s ease-in-out
+	border: none
+	vertical-align: middle
+	&:hover
+		background: darken($grey, 5%)
+		color: darken($grey, 26%)
+		cursor: pointer
+
+//Footer
+#footer
+	padding: 20px 15px
+	background: $grey
+	.list
+		padding-top: 10px
+		padding-bottom: 20px
+		font-size: 14px
+		.fa
+			color: $green
+		p
+			color: $text
+			margin: 5px 0
+	.contacts
+		padding-bottom: 20px
+		a
+			text-decoration: none
+			color: $green
+			font-size: 14px
+		p
+			margin: 5px 0
+			font-size: 14px
+			color: $text
+	.social
+		color: $text
+		padding-bottom: 10px
+		.fa
+			margin-top: 10px
+			color: $white
+			background: darken($grey, 15%)
+			padding: 5px
+			border-radius: 7px
+			margin-right: 7px
+			font-size: 20px
+			transition: 0.2s ease-in-out
+			&:hover
+				background: $green
+				cursor: pointer
+#bottom-bar
+	background: $grey
+	padding: 20px 0
+	.container
+		padding: 0 15px
+hr
+	border: 0.5px solid lighten($text, 30%)
+	margin: 0
+.copyright
+	font-size: 14px
+	color: $text
+.data
+	a
+		margin-bottom: 10px
+		display: block
+		font-size: 14px
+		color: $text
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+	span
+		color: $text
+		font-size: 15px
+
+//Form
+#form
+	position: fixed
+	background: rgba(black, 0.6)
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	display: flex
+	display: none
+	justify-content: center
+	align-items: center
+	
+	form
+		margin: auto
+		background: $white
+		max-width: 600px
+		padding: 40px 20px 30px 20px
+		position: relative
+		width: 100%
+		display: flex
+		flex-direction: column
+		.contact__button, .contact__buttonF
+			width: 150px
+			margin: 0 auto
+		input, select, textarea
+			margin-bottom: 15px
+			background: darken($grey, 5%)
+			color: darken($grey, 50%)
+			border: none
+			font-size: 15px
+		select
+			padding: 7px
+			border: 1.5px solid darken($grey, 5%)
+		input
+			padding: 10px
+		textarea
+			margin-top: 15px
+			padding: 10px
+			height: 120px
+		#close
+			position: absolute
+			right: 8px
+			top: 0
+			font-size: 38px
+			&:hover
+				cursor: pointer
+
+//Media Query
+@media (min-width: 768px)
+	#video
+		padding-top: 180px
+		padding-bottom: 300px
+		.header-title
+			font-size: 56px
+		.header-undertitle
+			font-size: 18px
+	#cards
+		.cards
+			top: -90px
+			.card
+				.photo
+					max-width: 145px
+					max-height: 145px
+				.card__link
+					font-size: 22px
+					margin-top: 40px
+	#reviews
+		.slider
+			.slide
+				padding: 20px
+				margin: 0 10px
+				.company
+					display: flex
+					h3
+						font-family: 'Open Sans Bold'
+						padding-left: 10px
+						font-size: 16px
+					img
+						max-width: 90px
+						max-height: 90px
+				.text
+					color: $text
+					font-size: 14px
+					line-height: 1.5
+					padding-bottom: 30px
+				.about
+					.read_full
+						a
+							font-size: 14px
+	#articles
+		.all_reviews
+			.fa
+				color: $green
+
+
+@media (min-width: 1024px)
+	.info-block
+		display: flex
+	.desktop-menu
+		display: block
+	.top-bar
+		display: none
+	#cards
+		.cards
+			top: -50px
+			display: flex
+			justify-content: space-between
+			.card
+				width: 25%
+	#advantages
+		.advantages
+			display: flex
+			flex-wrap: wrap
+			align-items: flex-start
+			justify-content: space-between
+			&-block
+				width: 31%
+				display: flex
+				align-items: flex-start
+				&__text
+					h4
+						font-size: 20px
+					p
+						font-size: 16px
+
+	#project
+		.container
+			position: relative
+			.all_projects
+				display: none
+		.all_projects-1
+			display: inline-block
+			position: absolute
+			right: 0
+			.fa
+				color: $green
+		.all_clients
+			display: inline-block
+			position: absolute
+			right: 0
+			padding-top: 30px
+	#clients
+		.container
+			position: relative
+		.photo-block
+			flex-wrap: wrap
+			justify-content: space-around
+			.photo
+				max-width: 230px
+				margin-bottom: 50px
+		.all_clients
+			display: inline-block
+			position: absolute
+			right: 0
+			padding-top: 30px
+		
+	#reviews
+		.container
+			position: relative
+		.slider
+			.slide
+				width: 300px
+				padding: 20px
+				margin: 0 10px
+				.company
+					display: flex
+					h3
+						font-family: 'Open Sans Bold'
+						padding-left: 10px
+						font-size: 16px
+					img
+						max-width: 90px
+						max-height: 90px
+				.text
+					color: $text
+					font-size: 14px
+					line-height: 1.5
+					padding-bottom: 30px
+				.about
+					.read_full
+						a
+							font-size: 14px
+		.all_reviews-1
+			.fa
+				color: $green
+			display: inline-block
+			position: absolute
+			right: 0
+			padding-top: 30px
+		.all_reviews
+			display: none
+	#articles
+		.container
+			position: relative
+		.section-title
+			margin-bottom: 0
+		.all_reviews-1
+			display: inline-block
+			position: absolute
+			right: 0
+			margin-top: -35px
+			a
+				text-decoration: none
+				&:hover
+					text-decoration: underline
+			.fa
+				color: $green
+		.all_reviews
+			display: none
+	#news
+		.container
+			position: relative
+		.section-title
+			margin-bottom: 40px
+		.news-block
+			display: flex
+			flex-wrap: none
+			justify-content: space-between
+			.block
+				position: relative
+				width: 20%
+				.news__date
+					font-size: 18px
+					span
+						font-size: 60px
+						color: $light-green
+						font-family: 'Open Sans ExtraBold'
+						line-height: 0.5
+				h4
+					font-family: 'Open Sans Bold'
+					margin: 15px 0
+				p
+					color: $text
+					font-size: 14px
+					margin-bottom: 90px
+					a
+						color: $text
+						&:hover
+							color: $green
+				.news__button
+					position: absolute
+					bottom: 30px
+					margin-top: 40px
+		.all_reviews
+			display: none
+		.all_reviews-1
+			display: inline-block
+			position: absolute
+			right: 0
+			padding-top: 40px
+			.fa
+				color: $green
+			.more
+				color: $green
+				text-decoration-color: $green
+	#contact
+		padding-top: 60px
+		padding-bottom: 60px
+		.container
+			display: flex
+			justify-content: space-between
+			img
+				display: block
+		.all_reviews
+			display: inline-block
+			margin-left: 30px
+			a
+				color: $green
+				text-decoration: underline
+				&:hover
+					text-decoration: none
+	#footer
+		padding-bottom: 0
+		.container
+			display: flex
+			justify-content: space-around
+			align-items: flex-start
+			.list
+				padding: 0
+			.contacts
+				padding-bottom: 20px
+				a
+					text-decoration: none
+					color: $green
+					font-size: 14px
+				p
+					margin: 5px 0
+					font-size: 14px
+					color: $text
+			.social
+				color: $text
+				padding-bottom: 10px
+				.fa
+					margin-top: 10px
+					color: $white
+					background: darken($grey, 15%)
+					padding: 5px
+					border-radius: 7px
+					margin-right: 7px
+					font-size: 20px
+					transition: 0.2s ease-in-out
+					&:hover
+						background: $green
+						cursor: pointer
+	#bottom-bar
+		.container
+			padding-top: 20px
+			display: flex
+			justify-content: space-between
